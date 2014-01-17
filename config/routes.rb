@@ -1,9 +1,12 @@
 HackPaste::Application.routes.draw do
+  devise_for :users
   get '/', to: 'main#home'
   get '/about', to: 'main#about'
 
   get "main/home"
   get "main/about"
+
+  resources :snippets
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
