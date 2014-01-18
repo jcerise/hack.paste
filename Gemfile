@@ -33,6 +33,9 @@ gem 'devise'
 # Formtastic - DSL for building forms from models
 gem 'formtastic'
 
+# Codeway gem, for syntax highlighting
+gem 'coderay'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

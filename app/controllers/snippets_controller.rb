@@ -17,6 +17,7 @@ class SnippetsController < ApplicationController
 
 	def show
 		@snippet = Snippet.find(params[:id])
+		@snippet.code = coderay(@snippet.code)
 	end
 
 	private
@@ -27,6 +28,10 @@ class SnippetsController < ApplicationController
 	def snippet_params
 		params.require(:snippet).permit(:title, :description, :language, :code, 
 			:private)
+	end
+
+	def coderay(text)
+  		CodeRay.scan(text, :ruby).div()
 	end
 
 end
