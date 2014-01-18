@@ -1,5 +1,8 @@
 <h1>Add Snippet</h1>
 <%= form_for @snippet do |f| %>
+
+    <%= render 'shared/error_messages' %>
+
     <%= f.label :title %>
     <%= f.text_field :title, :class => 'form-control' %>
 
@@ -12,7 +15,9 @@
     <%= f.label :code %>
     <%= f.text_area :code, :class => 'form-control' %>
 
-    <%= f.label :private %>
-    <%= f.check_box :private, :class => 'checkbox' %>
+    <%= f.label "Mark this snippet as private?", :class => 'private-label' %>
+    <%= f.check_box :private, :class => 'checkbox private' %>
+
+    <%= f.submit "Add Snippet", class: "btn btn-large btn-primary" %>
 
 <% end %>

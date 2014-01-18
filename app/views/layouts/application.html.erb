@@ -23,7 +23,11 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
+      <li><a href="/about">Snippets</a></li>
+      <% if user_signed_in? %>
+        <li><a href="/about">My Snippets</a></li>
+        <li><a href="/snippets/new">Add Snippet</a></li>
+      <% end %>
       
    </ul>
     <ul class="nav navbar-nav navbar-right login-nav">
