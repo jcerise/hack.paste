@@ -32,3 +32,23 @@ form.new_snippet {
 		color: white;
 	}
 }
+
+.snippet-information {
+	width: 45%;
+	margin: auto;
+	margin-bottom: 10px;
+
+	.panel-body {
+		text-align: left;
+
+		.info-label {
+			font-weight: bold;
+		}
+	}
+}
+
+pre.code-block {
+	width: 45%;
+	margin: auto;
+	margin-bottom: 20px;
+}

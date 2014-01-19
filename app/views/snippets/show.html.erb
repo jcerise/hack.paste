@@ -1,2 +1,24 @@
 <h1><%= @snippet.title %></h1>
+<div class="panel-group snippet-information" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Snippet Information
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div id="snippet-language">
+        	<span class="info-label">Language:</span> <%= @snippet.language %>
+        </div>
+        <div id="snippet-description">
+        	<span class="info-label">Description:</span>
+        	<%= @snippet.description %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <%= sanitize @snippet.code %>
