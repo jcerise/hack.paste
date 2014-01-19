@@ -10,7 +10,7 @@
  *
  *= require bootstrap.min
  *= require bootstrap-theme
- *= require coderay-twilight
+ *= require prism
  *= require_self
  *= require_tree .
  */
@@ -36,7 +36,13 @@
 p.alert {
 	width: 30%;
 	margin: auto;
-	background: #90EE90;
+}
+
+p.alert-error {
+    background: #F08080;
+  }
+p.alert-notice {
+    background: #90EE90;
 }
 
 form.formtastic li {

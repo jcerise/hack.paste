@@ -10,7 +10,7 @@
     <%= f.text_area :description, :class => 'form-control' %>
 
     <%= f.label :language %>
-    <%= f.select :language, options_for_select(['HTML','Javascript','PHP','Python','Ruby']), {}, {:class => 'form-control'} %>
+    <%= f.select :language, options_for_select(@languages), {}, {:class => 'form-control'} %>
 
     <%= f.label :code %>
     <%= f.text_area :code, :class => 'form-control' %>
