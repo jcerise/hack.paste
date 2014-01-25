@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 # Devise for user authentication management
 gem 'devise'
 
+# Will_paginate, for pagination
+gem 'will_paginate'
+
 # Formtastic - DSL for building forms from models
 gem 'formtastic'
 

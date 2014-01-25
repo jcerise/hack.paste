@@ -30,6 +30,11 @@ class SnippetsController < ApplicationController
   			redirect_to '/', :alert => "Record not found..."
 	end
 
+	def my_snippets
+		@user = current_user
+		@snippets = @user.snippets.paginate(:page => params[:page])
+	end
+
 	private
 
 	##

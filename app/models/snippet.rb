@@ -1,5 +1,7 @@
 class Snippet < ActiveRecord::Base
-	belongs_to :user
 
+	self.per_page = 5
+
+	belongs_to :user
 	validates :title, :description, :language, :code, :presence => true
 end
