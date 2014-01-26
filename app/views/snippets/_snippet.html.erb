@@ -1,4 +1,4 @@
-<li>
+<li class="<%= cycle("even", "odd") %>">
   <span class="content"><%= link_to(snippet.title, snippet_path(snippet)) %></span><br />
   <span class="snippet-list-language">Language: <%= snippet.language %></span>
 </li>

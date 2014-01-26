@@ -23,7 +23,7 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li class="<%= 'active' if request.env['PATH_INFO'] == '/' %>"><a href="/">Home</a></li>
-      <li class="<%= 'active' if request.env['PATH_INFO'] == '/about' %>"><a href="/about">Snippets</a></li>
+      <li class="<%= 'active' if request.env['PATH_INFO'] == '/all-snippets' %>"><a href="/all-snippets">Snippets</a></li>
       <% if user_signed_in? %>
         <li class="<%= 'active' if request.env['PATH_INFO'] == '/my-snippets' %>"><a href="/my-snippets">My Snippets</a></li>
         <li class="<%= 'active' if request.env['PATH_INFO'] == '/snippets/new' %>"><a href="/snippets/new">Add Snippet</a></li>

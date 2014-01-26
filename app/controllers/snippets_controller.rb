@@ -35,6 +35,10 @@ class SnippetsController < ApplicationController
 		@snippets = @user.snippets.paginate(:page => params[:page])
 	end
 
+	def view
+		@snippets = Snippet.paginate(:page => params[:page], :conditions => {:private => false})
+	end
+
 	private
 
 	##

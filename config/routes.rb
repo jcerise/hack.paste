@@ -8,6 +8,7 @@ HackPaste::Application.routes.draw do
 
   resources :snippets
   get '/my-snippets', to:'snippets#my_snippets'
+  get '/all-snippets', to: 'snippets#view'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
